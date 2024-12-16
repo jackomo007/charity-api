@@ -1,10 +1,9 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
-import { typeDefs } from "./schema";
-import { resolvers } from "./resolvers";
+import { resolvers } from "../graphql/resolvers";
+import { typeDefs } from "../graphql/schema";
 
 const app = express();
-
 async function startServer() {
   const server = new ApolloServer({
     typeDefs,

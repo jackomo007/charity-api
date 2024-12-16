@@ -16,8 +16,8 @@ export const typeDefs = gql`
   }
 
   type Query {
-    donations: [Donation!]
-    metrics: [Metric!]
+    donations: [Donation!]!
+    metrics: [Metric!]!
   }
 
   type Mutation {

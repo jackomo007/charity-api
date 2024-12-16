@@ -1,9 +1,4 @@
-interface AddDonationArgs {
-  amount: number;
-  donorName: string;
-  month: string;
-  category: string;
-}
+import { AddDonationArgs } from "../../interfaceAdapters/repositories/IDonationRepository";
 
 const donations = [
   {
@@ -103,7 +98,7 @@ export const resolvers = {
   },
   Mutation: {
     addDonation: (
-      _: unknown,
+      _: any,
       { amount, donorName, month, category }: AddDonationArgs
     ) => {
       const newDonation = {
@@ -113,7 +108,6 @@ export const resolvers = {
         month,
         category,
       };
-
       donations.push(newDonation);
       return newDonation;
     },
