@@ -3,6 +3,8 @@ import { ApolloServer } from "apollo-server-express";
 import { resolvers } from "../graphql/resolvers";
 import { typeDefs } from "../graphql/schema";
 
+const PORT = process.env.PORT || 4000;
+
 const app = express();
 async function startServer() {
   const server = new ApolloServer({
@@ -13,8 +15,8 @@ async function startServer() {
   await server.start();
   server.applyMiddleware({ app });
 
-  app.listen(4000, () => {
-    console.log("🚀 GraphQL API running at http://localhost:4000/graphql");
+  app.listen(PORT, () => {
+    console.log(`🚀 GraphQL API running at http://localhost:${PORT}/graphql`);
   });
 }
 
