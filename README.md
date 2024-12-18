@@ -157,6 +157,14 @@ src/
 
 ---
 
+## AWS API Prod
+
+[EC2](http://ec2-3-89-31-172.compute-1.amazonaws.com:4000/graphql)
+
+---
+
+---
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
