@@ -6,13 +6,21 @@ This project is a simple GraphQL API built using Apollo Server and Express. The 
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Technologies Used](#technologies-used)
-3. [Getting Started](#getting-started)
-4. [API Structure](#api-structure)
-5. [Queries and Mutations](#queries-and-mutations)
-6. [Directory Structure](#directory-structure)
-7. [License](#license)
+- [Charity API - GraphQL Server](#charity-api---graphql-server)
+  - [Table of Contents](#table-of-contents)
+  - [Project Overview](#project-overview)
+  - [Technologies Used](#technologies-used)
+  - [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+  - [API Structure](#api-structure)
+  - [Queries and Mutations](#queries-and-mutations)
+    - [Query Donations](#query-donations)
+    - [Query Metrics](#query-metrics)
+    - [Add Donation](#add-donation)
+  - [Directory Structure](#directory-structure)
+  - [License](#license)
+  - [Author](#author)
 
 ---
 
@@ -65,7 +73,7 @@ Follow these steps to set up and run the API locally:
 3. Start the server:
 
    ```bash
-   npm run start
+   npm run dev
    ```
 
 4. Open the GraphQL Playground at:
