@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ts-node src/infrastructure/server/index.ts",
     "build": "tsc",
-    "start": "npm run build && node build/infrastructure/server/index.ts"
+    "start": "npm run build && node build/infrastructure/server/index.js"
   },
   "dependencies": {
     "express": "^4.18.2",
