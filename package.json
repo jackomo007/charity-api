@@ -1,12 +1,11 @@
 {
-  "name": "api-server",
+  "name": "charity-api",
   "version": "1.0.0",
   "description": "GraphQL API for CharityVest Dashboard",
-  "main": "src/index.ts",
+  "main": "src/infrastructure/server/index.ts",
   "scripts": {
-    "dev": "ts-node src/infrastructure/server/index.ts",
-    "build": "tsc",
-    "start": "npm run build && node build/infrastructure/server/index.js"
+    "start": "ts-node src/infrastructure/server/index.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "express": "^4.18.2",
