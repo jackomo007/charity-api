@@ -19,6 +19,7 @@ This project is a simple GraphQL API built using Apollo Server and Express. The 
     - [Query Metrics](#query-metrics)
     - [Add Donation](#add-donation)
   - [Directory Structure](#directory-structure)
+  - [Example Endpoints](#example-endpoints)
   - [License](#license)
   - [Author](#author)
 
@@ -163,6 +164,36 @@ src/
 └── shared/               # Shared types and utilities
 ```
 
+---
+
+## Example Endpoints
+
+- **Get Data:**
+
+```
+curl --request POST \
+  --url https://charity-8ba6095og-angels-projects-1a4dcd1f.vercel.app/graphql \
+  --header 'Content-Type: application/json' \
+  --data '{"query":"query Query { metrics { label type value } donations { amount category donorName id month } }"}'
+```
+---
+
+- **Create Data:**
+
+```
+curl --request POST \
+  --url https://charity-8ba6095og-angels-projects-1a4dcd1f.vercel.app/graphql \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "query": "mutation AddDonation($amount: Float!, $donorName: String!, $month: String!, $category: String!) { addDonation(amount: $amount, donorName: $donorName, month: $month, category: $category) { id amount donorName month category } }",
+    "variables": {
+      "amount": 10000,
+      "donorName": "John Doe",
+      "month": "March",
+      "category": "Education"
+    }
+  }'
+```
 ---
 
 ## License
